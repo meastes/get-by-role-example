@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DrawerExample from './components/DrawerExample';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -19,6 +20,13 @@ function App() {
           Learn React
         </a>
       </header>
+      <DrawerExample
+        selectedColumns={['field0']}
+        setSelectedColumns={() => {
+          console.log('update columns!');
+        }}
+        open
+      />
     </div>
   );
 }
